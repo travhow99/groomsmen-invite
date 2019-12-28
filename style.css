@@ -1,0 +1,43 @@
+body {
+    background-image: linear-gradient(90deg, #edbc00 25%, #a70042 25%, #a70042 50%, #edbc00 50%, #edbc00 75%, #a70042 75%, #a70042 100%);
+    background-size: 120.00px 120.00px;
+    color: #FFFFFF;
+}
+
+.container {
+    background: #ece8e8;
+    padding: 120px 20px;
+}
+
+h1 {
+    color: #004C99;
+}
+
+p.lead {
+    color: #a70042;
+    font-weight: 300;
+}
+
+.decline {
+    background: #DB002C;
+    color: #FFFFFF;
+}
+
+.accept {
+    background: #004C99;
+    color: #FFFFFF;
+}
+
+.decline:hover, .accept:hover {
+    color: #FFEE00;
+}
+
+.response {
+    height: 160px;
+    width: 160px;
+}
+
+.far {
+    font-size: 48px;
+    margin-top: 12px;
+}
