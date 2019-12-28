@@ -46,13 +46,13 @@
             <div class="col text-center">
                 <button class="btn response decline">
                     No, f him<br>
-                    <i class="far fa-check-circle"></i>
+                    <i class="far fa-times-circle"></i>
                 </button>
             </div>
             <div class="col text-center">
                 <button class="btn response accept">
                     Yes, of course!<br>
-                    <i class="far fa-times-circle"></i>
+                    <i class="far fa-check-circle"></i>
                 </button>
             </div>
         </div>
