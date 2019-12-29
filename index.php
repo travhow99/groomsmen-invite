@@ -29,18 +29,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://use.fontawesome.com/830e5c8d3a.js"></script>
     <title>Groomsmen</title>
 </head>
 
-<body>
+<body class="home">
     <div class="container mt-4">
         <div class="row">
-            <h1 class="mx-auto mb-2">You've Received a Call...</h1>
-            <p class="lead mx-auto mb-4"><?php echo $name; ?>, will you join the squad as one of Travis's <?php echo $role; ?>?</p>
+            <h1 class="text-center mb-2 w-100">You've Received a Call...</h1>
+            <p class="lead text-center mb-4 w-100"><?php echo $name; ?>, will you join the squad as one of Travis's <?php echo $role; ?>?</p>
         </div>
         <div class="row">
             <div class="col text-center">

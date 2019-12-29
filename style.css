@@ -6,16 +6,29 @@ body {
 
 .container {
     background: #ece8e8;
-    padding: 120px 20px;
+    padding: 40px 20px;
+    margin-bottom: 60px;
+}
+
+.team .container {
+    background: #0048a4;
 }
 
 h1 {
     color: #004C99;
 }
 
+.team h1 {
+    color: #ffffff;
+}
+
 p.lead {
     color: #a70042;
     font-weight: 300;
+}
+
+.team p.lead {
+    color: #f5bb00;
 }
 
 .decline {
@@ -40,4 +53,139 @@ p.lead {
 .far {
     font-size: 48px;
     margin-top: 12px;
+}
+
+.half {
+    background-image: url(https://image.freepik.com/free-photo/green-grass-field-background-soccer-football-sports_64749-1829.jpg);
+    height: 380px;
+    width: 100%;
+    max-width: 720px;
+    border: 4px solid white;
+    position: relative;
+}
+
+.half:nth-of-type(2) {
+    border-top: none;
+}
+
+#field {
+    width: 100%;
+    position: relative;
+    padding: 0 12px;
+}
+
+#center {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    border: 4px solid white;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#topBox, #bottomBox {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid white;
+}
+
+#bottomBox {
+    top: auto;
+    bottom: 0;
+}
+
+.player {
+    width: 120px;
+    height: 120px;
+    border: 5px solid #f5bb00;
+    border-radius: 50%;
+    background-image: url('http://s3.amazonaws.com/37assets/svn/765-default-avatar.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.captain {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 25px;
+    width: 25px;
+    background-image: linear-gradient(0deg, #004a9e 25%, #a70042 25%, #a70042 50%, #004a9e 50%, #004a9e 75%, #a70042 75%, #a70042 100%);
+    background-size: 20px 20px;
+}
+
+#travis {
+    background-image: url('https://travishowell.net/wp-content/uploads/2019/03/travis-howell-dev.jpeg');
+}
+
+#travis .captain {
+    background-image: linear-gradient(0deg, #f5bb00 25%, #a70042 25%, #a70042 50%, #f5bb00 50%, #f5bb00 75%, #a70042 75%, #a70042 100%);
+}
+
+.placard {
+    align-self: flex-end;
+    flex: none;
+    border: 4px solid #f5bb00;
+    border-top: 2px solid #f5bb00;
+    background: #b60040;
+    padding: 0 12px;
+    margin-bottom: -12px;
+}
+
+.double {
+    width: 65%;
+    height: 92px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 20;
+}
+
+.single {
+    width: 35%;
+    height: 92px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.mid {
+    justify-content: space-between;
+}
+
+.top {
+    top: 40px;
+}
+
+.bottom {
+    bottom: 80px;
+}
+
+@media (max-width: 600px) {
+    .player {
+        width: 90px;
+        height: 90px;
+    }
+
+    .captain {
+        height: 18px;
+        width: 18px;
+        background-size: 18px 18px;
+    }
 }

@@ -7,7 +7,9 @@ $(document).ready(function () {
             name: name,
             response: response,
         }, function (data) {
-            console.log(data);
+            if (data === 'success') {
+                window.location = 'team.php';
+            }
         })
     });
 }); 
