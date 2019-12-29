@@ -9,6 +9,8 @@ $(document).ready(function () {
         }, function (data) {
             if (data === 'success') {
                 window.location = 'team.php';
+            } else if (data === 'nogo') {
+                window.location = `sad.php?name=${name}`;
             }
         })
     });

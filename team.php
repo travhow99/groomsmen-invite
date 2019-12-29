@@ -21,25 +21,15 @@ while ($row = $result->fetch_assoc()) {
 $stmt->close();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://use.fontawesome.com/830e5c8d3a.js"></script>
-    <title>Groomsmen</title>
-</head>
+<?php include 'head.php'; ?>
 
 <body class="team">
     <div class="container mt-4">
         <div class="row">
             <h1 class="text-center mb-2 w-100">Welcome to the Squad!</h1>
-            <br>
+        </div>
+        <?php include 'schedule.php'; ?>
+        <div class="row">
             <p class="lead text-center mb-4 w-100">Let's view the lineup...</p>
         </div>
         <div class="row">
@@ -141,11 +131,9 @@ $stmt->close();
                 <div id="bottomBox"></div>
             </div>
         </div>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script src="app.js"></script>
+    </div>
+    
+    <?php include 'scripts.php'; ?>
 </body>
 
 </html>

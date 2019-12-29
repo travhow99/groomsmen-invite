@@ -19,5 +19,8 @@ if ($stmt->affected_rows === 0) {
 $stmt->close();
 
 // TODO: Send email notification to travis
-
-echo 'success';
+if ($response) {
+    echo 'success';
+} else {
+    echo 'nogo';
+}
