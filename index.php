@@ -1,12 +1,33 @@
 <?php
     if (!$_GET['name'] || empty($_GET['name'])) {
-        echo 'wtf';
         // Redirect to error page
         header('Location: https://travishowell.net/error');
     }
+    require_once 'config.php';
+    $mysqli = new MySQLi(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    if ($mysqli->connect_error) {
+        die('Connect Error (' . $mysqli->connect_errno . ') '
+            . $mysqli->connect_error);
+    }
+    
+    $stmt = $mysqli->prepare("SELECT name, response FROM people");
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result->num_rows === 0) exit('No rows');
+    while ($row = $result->fetch_assoc()) {
+        $person[$row['name']] = $row['response'];
+    }
+    $stmt->close();
+
+    $name = ucfirst($_GET['name']);
+    
+    $responded = $person[$name];
     // Check if user has answered?
     if ($responded) {
         // Redirect to squad list
+        header('Location: team.php');
+    } elseif (!array_key_exists($name, $person)) {
+        header('Location: https://travishowell.net/error');
     }
 
     if ($_GET['name'] === 'chase' || $_GET['name'] === 'david') {
@@ -15,7 +36,6 @@
         $role = 'Groomsman';
     }
 
-    $name = ucfirst($_GET['name']);
 ?>
 <script>
     const name = '<?php echo $name; ?>';
