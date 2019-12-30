@@ -32,6 +32,8 @@
 
     if ($_GET['name'] === 'chase' || $_GET['name'] === 'david') {
         $role = '(co-)Best Man';
+    } elseif ($_GET['name'] === 'alli') {
+        $role = 'WIFE';
     } else {
         $role = 'Groomsman';
     }
@@ -48,17 +50,21 @@
     <div class="container mt-4">
         <div class="row">
             <h1 class="text-center mb-2 w-100">You've Received a Call...</h1>
-            <p class="lead text-center mb-4 w-100"><?php echo $name; ?>, will you join the squad as one of Travis's <?php echo $role; ?>?</p>
+            <p class="lead text-center mb-4 w-100"><?php echo $name; ?>, will you join the squad as 
+            <?php if ($role !== "WIFE" && $role !== "(co-)Best Man") {
+                echo 'one of';
+            } ?>
+            Travis's <?php echo $role; ?>?</p>
         </div>
         <?php include 'schedule.php'; ?>
         <div class="row">
-            <div class="col text-center">
+            <div class="col-6 text-center">
                 <button class="btn response decline">
                     No, f him<br>
                     <i class="far fa-times-circle"></i>
                 </button>
             </div>
-            <div class="col text-center">
+            <div class="col-6 text-center">
                 <button class="btn response accept">
                     Yes, of course!<br>
                     <i class="far fa-check-circle"></i>

@@ -147,27 +147,37 @@ p.lead {
 }
 
 #chase {
-    background-image: url('http://travishowell.net/images/chase.jpg');
+    background-image: url('https://travishowell.net/images/chase.jpg');
 }
 
 #david {
-    background-image: url('http://travishowell.net/images/david.jpg');
+    background-image: url('https://travishowell.net/images/david.jpg');
 }
 
 #amir {
-    background-image: url('http://travishowell.net/images/amir.jpg');
+    background-image: url('https://travishowell.net/images/amir.jpg');
 }
 
 #zack {
-    background-image: url('http://travishowell.net/images/zack.jpg');
+    background-image: url('https://travishowell.net/images/zack.jpg');
 }
 
 #mike {
-    background-image: url('http://travishowell.net/images/mike.jpg');
+    background-image: url('https://travishowell.net/images/mike.jpg');
 }
 
 #eric {
-    background-image: url('http://travishowell.net/images/eric.jpg');
+    background-image: url('https://travishowell.net/images/eric.jpg');
+    background-position: center;
+}
+
+#alli {
+    background-image: url('https://travishowell.net/images/alli.jpg');
+    background-position: center;
+}
+
+#lugene {
+    background-image: url('https://travishowell.net/images/lugene.jpg');
     background-position: center;
 }
 
@@ -186,7 +196,7 @@ p.lead {
 }
 
 .double {
-    width: 65%;
+    width: 100%;
     height: 92px;
     position: absolute;
     left: 50%;
@@ -217,8 +227,16 @@ p.lead {
     top: 40px;
 }
 
+.attack {
+    top: 100px;
+}
+
 .bottom {
     bottom: 80px;
+}
+
+#keeper {
+    bottom: -25px;
 }
 
 @media (max-width: 600px) {

@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require_once 'config.php';
 
 $mysqli = new MySQLi(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -31,7 +35,14 @@ $stmt->close();
         <div class="row">
             <div id="field">
                 <div class="half mx-auto">
-                    <div class="double top">
+                    <div class="single striker">
+                        <div class="player" id="lugene">
+                            <div class="placard">
+                                Lugene
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double top attack">
                         <div class="player" <?php if ($person['Chase']) { ?> id="chase" <?php } ?>>
                             <div class="captain"></div>
                             <div class="placard">
@@ -118,6 +129,13 @@ $stmt->close();
                                     echo 'TBD...';
                                 }
                                 ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single" id="keeper">
+                        <div id="alli" class="player">
+                            <div class="placard">
+                                Alli
                             </div>
                         </div>
                     </div>
